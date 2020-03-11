@@ -56,3 +56,16 @@ console.log( fromArray2 ); // Even spaces and special characters will be capture
 
 var filtered = myArray.filter( function ( element ) { return element > 4; } );
 console.log( filtered ); // ALL matches returned! 5 and 38!
+
+/**
+ * .reduce() method:
+ * We can add on to a value, returns only a single.
+ */
+
+var reduceResult = myArray.reduce( function ( accumulator, currentVal ) {
+    return accumulator + currentVal;
+} );
+console.log( reduceResult ); // Because we have strings in here, they are getting concatenated.
+
+console.log( [ 1, 2, 3, 4 ].reduce( function ( a, v ) { return a + v; } ) ); // Because we have numbers in here, they are being added (mathematically.)
+
