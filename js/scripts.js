@@ -25,3 +25,15 @@ console.log( isMyStringInside ); // Not found :(
 var findAnIndex = myArray.findIndex( function ( element ) { return element === 2; } );
 console.log( findAnIndex ); // But this time, it returned the value's INDEX.
 
+/**
+ * .entries()
+ */
+
+var pairing = myArray.entries();
+console.log( pairing );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
