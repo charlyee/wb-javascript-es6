@@ -1,3 +1,6 @@
+// import { Movie } from './movie'; // Bring in our file.
+// We'll come back to import! ^^^
+
 /**
  * Let's see what some of our newer array methods are...
  */
@@ -219,14 +222,44 @@ console.log( myReplacedString );
 
 // console.log( myBlockNestedVar );
 
+let myFinalResult = 0;
 // We CAN name blocks if we want.
 myOrganizeName: { // This could be named anything...
     // We can organize some code in here, and control scope of let/const.
     let myBlockNestedVar = 55; // We used the same name as in our unnamed block!? That's okay, it was born in a differently scoped block!
     myBlockNestedVar++;
     console.log( myBlockNestedVar );
+    myFinalResult = myBlockNestedVar;
 }
+console.log( myFinalResult );
 
 /**
- * 
+ * Classes.
+ * *** CHECK OUR IMPORT, THAT'S HOW WE'RE ACCESSING THIS!
  */
+
+class Movie {
+    constructor( name, genre, year ) {
+        this.name = name;
+        this.genre = genre;
+        this.year = year;
+    }
+    showPoster() { // This is a method! We can name them as we'd like.
+        const info = `
+            MOVIE INFO
+            ==========
+            Name: ${this.name}
+            Genre: ${this.genre}
+            Year: ${this.year}
+        `;
+        return info;
+    }
+}
+
+const tron = new Movie( 'Disney\'s TRON', 'Adventure', 1982 );
+const dragonheart = new Movie( 'Dragonheart', 'Medieval Fantasy', 1996 );
+const godfather = new Movie( 'Godfather II', 'Action/Thriller', 1974 );
+
+console.log( tron );
+console.log( dragonheart );
+console.log( godfather );
