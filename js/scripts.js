@@ -148,9 +148,13 @@ console.log( addNums() ); // No arguments! But our default values kick in!
  * Rest parameter.
  */
 
-findHighNum = ( ...args ) => { // ...args will capture any number of arguments that we pass!
-    console.log( args ); // It can be called by the name we had inbetween our parenthesis.
-    return args;
+// Rest paramater MUST BE THE LAST PARAMETER.
+findHighNums = ( minNum = 0, ...args ) => { // ...args will capture any number of arguments that we pass!
+    minNum = Number( minNum );
+    if ( minNum === NaN ) minNum = 0;
+    const highNums = args.filter( ( element ) => element > minNum );
+    // console.log( args ); // It can be called by the name we had inbetween our parenthesis.
+    return highNums;
 }
 
 // 
