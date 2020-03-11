@@ -172,3 +172,44 @@ const sampleName = 'Sam';
 const myNewString = `Hey there, my name is ${sampleName}; I'd like to give you a big: "${helloVar}"!!`; // The syntax for template literals is: ${variableName}
 //NOTE: This only works inside of backticks! But is super useful. It saves us from extra concatenation.
 console.log( myNewString );
+
+/**
+ * Spread Operator
+ * ***Don't get this confused with the rest parameter! Both are three dots...
+ * ***Remember that rest parameter is always in PARAMETER area of a function, nowhere else. Spread is used ANYWHERE else, basically.
+ */
+
+const newArray = [ 'Hello', ',', ' ', 'World', '!' ];
+console.log( newArray );
+console.log( ...newArray ); // Brought the values in the array together as one (space-separated) string. Or did it?
+
+// Spread operator separates into separate values.
+const aBunchOfNums = [ 5, 10, 36, 58 ];
+console.log( addAllNums( 5, 10, 36, 58 ) ); // This and the below, are equivalent (our array gets broken up!)
+console.log( addAllNums( ...aBunchOfNums ) ); // Spreading an argument.
+
+/**
+ * String Methods!
+ */
+
+/**
+ * .search() Method:
+ * 
+ * Regex Learning Tool: https://regexone.com/
+ */
+
+const myTestString = 'Greetings, Programs!';
+console.log( myTestString.search( /TING/i ) ); // Regex match. i is for case-INsensitive. Returns the SUBSTRING POSITION. TING is position 4 in string.
+
+/**
+ * .replace() Method:
+ */
+
+const myReplacedString = myTestString.replace( /Programs/, 'World' ); // Find a string, and replace it! Super cool.
+console.log( myReplacedString );
+
+/**
+ * Blocks:
+ */
+
+
