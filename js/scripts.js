@@ -212,4 +212,21 @@ console.log( myReplacedString );
  * Blocks:
  */
 
+ // Unnamed block.. we can use this to contain otherwise-global const and let variables.
+{
+    const myBlockNestedVar = 38;
+}
 
+// console.log( myBlockNestedVar );
+
+// We CAN name blocks if we want.
+myOrganizeName: { // This could be named anything...
+    // We can organize some code in here, and control scope of let/const.
+    let myBlockNestedVar = 55; // We used the same name as in our unnamed block!? That's okay, it was born in a differently scoped block!
+    myBlockNestedVar++;
+    console.log( myBlockNestedVar );
+}
+
+/**
+ * 
+ */
