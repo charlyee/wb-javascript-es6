@@ -67,7 +67,7 @@ var reduceResult = myArray.reduce( function ( accumulator, currentVal ) {
 } );
 console.log( reduceResult ); // Because we have strings in here, they are getting concatenated.
 
-console.log( [ 1, 2, 3, 4 ].reduce( function ( a, v ) { return a + v; } ) ); // Because we have numbers in here, they are being added (mathematically.)
+console.log( [ 1, 2, 3, 4 ].reduce( ( a, v ) => a + v ) ); // Because we have numbers in here, they are being added (mathematically.)
 
 /**
  * Let and Const
@@ -112,3 +112,25 @@ myObj.hobbies.push( 'Mountain Climbing' );
 console.log( myObj );
 
 // myObj = {} // THIS WOULD STILL ERROR. Only insides for a const can be manipulated.
+
+/**
+ * Let's shake things up with: FUNCTIONS
+ * New syntax...
+ */
+
+// Classic function declaration...
+function myFunction ( a, b ) {
+    return Number( a ) + Number( b );
+}
+console.log( myFunction( 3, 7 ) );
+
+// ES6 style:
+myFunction = ( a, b ) => Number( a ) + Number( b ); // Instant return with no curly braces.
+console.log( myFunction( 3, 8 ) );
+
+// Bigger function (ES6)
+myOtherFunction = ( a, b ) => { // Use curly braces for larger, more complex operations.
+    const myAnswer = Number( a ) + Number( b );
+    return myAnswer;
+}
+console.log( myOtherFunction( 34, 6 ) );
