@@ -30,10 +30,18 @@ console.log( findAnIndex ); // But this time, it returned the value's INDEX.
  */
 
 var pairing = myArray.entries();
-console.log( pairing );
+console.log( pairing ); // Returns an iterator.
+console.log( pairing.next().value ); // We can keep bumping to the next item, getting a nice key/value array to let us know what's inside!
 console.log( pairing.next().value );
 console.log( pairing.next().value );
 console.log( pairing.next().value );
 console.log( pairing.next().value );
 console.log( pairing.next().value );
 console.log( pairing.next().value );
+
+/**
+ * .from() method:
+ */
+
+var fromArray = Array.from( 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' );
+console.log( fromArray );
