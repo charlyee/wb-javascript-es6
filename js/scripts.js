@@ -239,18 +239,29 @@ console.log( myFinalResult );
  */
 
 class Movie {
-    constructor( name, genre, year ) {
+    constructor( name, genre, year ) { // We can use the constructor method to set up our properties. When we make a new Movie (object), we can pass in arguments this way!
         this.name = name;
         this.genre = genre;
         this.year = year;
+    }
+    get name() { // How we retrieve the property. A GETTER.
+        return this.name;
+    }
+    set name( name ) { // How we store a new property value. A SETTER.
+        if ( typeof name === 'string' ) {
+            this.name = name;
+        } else {
+            this.name = name.toString();
+        }
+        return this.name;
     }
     showPoster() { // This is a method! We can name them as we'd like.
         const info = `
             MOVIE INFO
             ==========
-            Name: ${this.name}
+            Name:  ${this.name}
             Genre: ${this.genre}
-            Year: ${this.year}
+            Year:  ${this.year}
         `;
         return info;
     }
