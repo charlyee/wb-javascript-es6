@@ -107,4 +107,8 @@ const myObj = {
 }
 
 myObj.name = 'Sandy'; // Can we update PROPERTIES or array ELEMENTS inside of a const-declared variable?
+myObj.hobbies = [];
+myObj.hobbies.push( 'Mountain Climbing' );
 console.log( myObj );
+
+// myObj = {} // THIS WOULD STILL ERROR. Only insides for a const can be manipulated.
