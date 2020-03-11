@@ -134,3 +134,21 @@ myOtherFunction = ( a, b ) => { // Use curly braces for larger, more complex ope
     return myAnswer;
 }
 console.log( myOtherFunction( 34, 6 ) );
+
+/**
+ * Function default parameter values.
+ */
+
+// We can set defaults, to prevent errors in case nothing gets passed in for a parameter!
+addNums = ( x = 0, y = 0 ) => x + y;
+
+console.log( addNums() ); // No arguments! But our default values kick in!
+
+/**
+ * Rest parameter.
+ */
+
+findHighNum = ( ...args ) => {
+    console.log( args );
+    return args;
+}
