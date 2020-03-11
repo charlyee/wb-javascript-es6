@@ -161,3 +161,14 @@ console.log( findHighNums( 5, 2, 20, 50, 3, 0, 10, 24, -508 ) );
 // Getting the sum of ALL numbers passed in!
 addAllNums = ( ...nums ) => nums.reduce( ( a, v ) => a + v );
 console.log( addAllNums( 64, 6, 10, 20 ) );
+
+/**
+ * Template Literals
+ */
+
+const helloVar = 'Hello, World!';
+const sampleName = 'Sam';
+
+const myNewString = `Hey there, my name is ${sampleName}; I'd like to give you a big: "${helloVar}"!!`; // The syntax for template literals is: ${variableName}
+//NOTE: This only works inside of backticks! But is super useful. It saves us from extra concatenation.
+console.log( myNewString );
