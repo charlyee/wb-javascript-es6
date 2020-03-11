@@ -43,5 +43,16 @@ console.log( pairing.next().value );
  * .from() method:
  */
 
+// We can pass a string to Array's "from" method, and break each character out into an array!
 var fromArray = Array.from( 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' );
-console.log( fromArray );
+console.log( fromArray ); // Oh geeze, that's a 26-element array now.
+var fromArray2 = Array.from( 'Hello, World!' );
+console.log( fromArray2 ); // Even spaces and special characters will be captured as elements!
+
+/**
+ * .filter() method:
+ * Returns array of all matches.
+ */
+
+var filtered = myArray.filter( function ( element ) { return element > 4; } );
+console.log( filtered ); // ALL matches returned! 5 and 38!
