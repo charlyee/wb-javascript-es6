@@ -149,14 +149,15 @@ console.log( addNums() ); // No arguments! But our default values kick in!
  */
 
 // Rest paramater MUST BE THE LAST PARAMETER.
-findHighNums = ( minNum = 0, ...args ) => { // ...args will capture any number of arguments that we pass!
+findHighNums = ( minNum = 0, ...args/* Named whatever we want. But needs the three dots! */ ) => { // ...args will capture any number of arguments that we pass!
     minNum = Number( minNum );
     if ( minNum === NaN ) minNum = 0;
     const highNums = args.filter( ( element ) => element > minNum );
     // console.log( args ); // It can be called by the name we had inbetween our parenthesis.
     return highNums;
 }
+console.log( findHighNums( 5, 2, 20, 50, 3, 0, 10, 24, -508 ) );
 
-// 
+// Getting the sum of ALL numbers passed in!
 addAllNums = ( ...nums ) => nums.reduce( ( a, v ) => a + v );
 console.log( addAllNums( 64, 6, 10, 20 ) );
