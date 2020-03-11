@@ -148,7 +148,11 @@ console.log( addNums() ); // No arguments! But our default values kick in!
  * Rest parameter.
  */
 
-findHighNum = ( ...args ) => {
-    console.log( args );
+findHighNum = ( ...args ) => { // ...args will capture any number of arguments that we pass!
+    console.log( args ); // It can be called by the name we had inbetween our parenthesis.
     return args;
 }
+
+// 
+addAllNums = ( ...nums ) => nums.reduce( ( a, v ) => a + v );
+console.log( addAllNums( 64, 6, 10, 20 ) );
