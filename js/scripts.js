@@ -279,3 +279,8 @@ const godfather = new Movie( 'Godfather II', 'Action/Thriller', 1974 );
 console.log( tron );
 console.log( dragonheart );
 console.log( godfather );
+
+
+/**
+ * Inheritance.
+ */
