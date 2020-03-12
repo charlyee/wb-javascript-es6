@@ -245,3 +245,7 @@ const godfather = new Movie( 'Godfather II', 'Action/Thriller', 1974 );
 console.log( tron );
 console.log( dragonheart );
 console.log( godfather );
+
+const billAndTedsExcellentAdventure = new BuyableMovie( 'Bill and Ted\'s Excellent Adventure', 'Comedy', 1989 );
+billAndTedsExcellentAdventure.setPrice = '16.37';
+console.log( billAndTedsExcellentAdventure );
