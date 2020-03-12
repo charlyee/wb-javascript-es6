@@ -1,7 +1,7 @@
 export class Calculator {
     static add ( ...nums ) { // Rest param! We can pass in many values.
         let sum = 0;
-        for ( let i = 0; i > nums.length; i++ ) { // i will live and die in the BLOCK (everything from "for" to its CLOSING curly brace: }.)
+        for ( let i = 0; i < nums.length; i++ ) { // i will live and die in the BLOCK (everything from "for" to its CLOSING curly brace: }.)
             sum += Number( nums[i] );
         }
         return sum;

@@ -249,3 +249,11 @@ console.log( godfather );
 const billAndTedsExcellentAdventure = new BuyableMovie( 'Bill and Ted\'s Excellent Adventure', 'Comedy', 1989 );
 billAndTedsExcellentAdventure.setPrice = '16.37';
 console.log( billAndTedsExcellentAdventure );
+
+
+// Using a regular (non-static) method. Called from OBJECTS.
+console.log( billAndTedsExcellentAdventure.showPoster() );
+
+// Static methods are more "generic" and called directly from the CLASS.
+console.log( Calculator.add( 3, 3, 3, 3, '3', 5 ) ); // 20
+console.log( Calculator.subtract( 16, 5 ) ); // 11
