@@ -1,11 +1,5 @@
 import { Movie } from './Movie.Class.js';
-export class BuyableMovie extends Movie {
-    // constructor ( name, genre, year, price ) {
-    //     this.name = name;
-    //     this.genre = genre;
-    //     this.year = year;
-    //     this.price = price; // Set a price now, too.
-    // }
+export class BuyableMovie extends Movie { // EXTEND keyword means we are INHERITING all methods and properties from the ORIGINAL class (Movie, in this case.)
     get getPrice () {
         return this.price;
     }
