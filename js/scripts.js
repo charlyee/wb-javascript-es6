@@ -257,3 +257,33 @@ console.log( billAndTedsExcellentAdventure.showPoster() );
 // Static methods are more "generic" and called directly from the CLASS.
 console.log( Calculator.add( 3, 3, 3, 3, '3', 5 ) ); // 20
 console.log( Calculator.subtract( 16, 5 ) ); // 11
+
+/**
+ * SETS
+ */
+
+let mySet = new Set();
+
+mySet.add( 5 ); // Set values must be unique.
+mySet.add( 5 ); // This will be ignored... 5 is already in the set!
+mySet.add( 2 );
+
+const myConstValTest = 'Hello, World! :)';
+mySet.add( myConstValTest );
+
+console.log( mySet );
+
+console.log( mySet.size ); // How many items are there in the set?
+
+console.log( mySet.has( 5 ) ); // 5 was found inside! true
+console.log( mySet.has( 36 ) ); // 36 isn't in there... false
+
+let mySetIterator = mySet.entries(); // Returns an iterator 'entries'. We had this in Array as well!
+console.log( mySetIterator.next().value ); // Show value 1...
+console.log( mySetIterator.next().value ); // Now value 2...
+console.log( mySetIterator.next().value ); // Now value 3...
+// Since Sets contain only unique values, there is no need for a proper
+// "key", as the value is already unique!
+
+mySet.delete( 'Hello, World! :)' ); // Remove an element from your Set.
+console.log( mySet );
