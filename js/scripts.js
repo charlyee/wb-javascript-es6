@@ -1,4 +1,4 @@
-// import { Movie } from './movie'; // Bring in our file.
+import { Movie } from './Movie.Class.js'; // Bring in our file.
 // We'll come back to import! ^^^
 
 /**
@@ -122,17 +122,17 @@ console.log( myObj );
  */
 
 // Classic function declaration...
-function myFunction ( a, b ) {
+function myFunction1 ( a, b ) {
     return Number( a ) + Number( b );
 }
-console.log( myFunction( 3, 7 ) );
+console.log( myFunction1( 3, 7 ) );
 
 // ES6 style:
-myFunction = ( a, b ) => Number( a ) + Number( b ); // Instant return with no curly braces.
-console.log( myFunction( 3, 8 ) );
+var myFunction2 = ( a, b ) => Number( a ) + Number( b ); // Instant return with no curly braces.
+console.log( myFunction2( 3, 8 ) );
 
 // Bigger function (ES6)
-myOtherFunction = ( a, b ) => { // Use curly braces for larger, more complex operations.
+var myOtherFunction = ( a, b ) => { // Use curly braces for larger, more complex operations.
     const myAnswer = Number( a ) + Number( b );
     return myAnswer;
 }
@@ -143,7 +143,7 @@ console.log( myOtherFunction( 34, 6 ) );
  */
 
 // We can set defaults, to prevent errors in case nothing gets passed in for a parameter!
-addNums = ( x = 0, y = 0 ) => x + y;
+var addNums = ( x = 0, y = 0 ) => x + y;
 
 console.log( addNums() ); // No arguments! But our default values kick in!
 
@@ -152,7 +152,7 @@ console.log( addNums() ); // No arguments! But our default values kick in!
  */
 
 // Rest paramater MUST BE THE LAST PARAMETER.
-findHighNums = ( minNum = 0, ...args/* Named whatever we want. But needs the three dots! */ ) => { // ...args will capture any number of arguments that we pass!
+var findHighNums = ( minNum = 0, ...args/* Named whatever we want. But needs the three dots! */ ) => { // ...args will capture any number of arguments that we pass!
     minNum = Number( minNum );
     if ( minNum === NaN ) minNum = 0;
     const highNums = args.filter( ( element ) => element > minNum );
@@ -162,7 +162,7 @@ findHighNums = ( minNum = 0, ...args/* Named whatever we want. But needs the thr
 console.log( findHighNums( 5, 2, 20, 50, 3, 0, 10, 24, -508 ) );
 
 // Getting the sum of ALL numbers passed in!
-addAllNums = ( ...nums ) => nums.reduce( ( a, v ) => a + v );
+var addAllNums = ( ...nums ) => nums.reduce( ( a, v ) => a + v );
 console.log( addAllNums( 64, 6, 10, 20 ) );
 
 /**
@@ -232,45 +232,6 @@ myOrganizeName: { // This could be named anything...
     myFinalResult = myBlockNestedVar;
 }
 console.log( myFinalResult );
-
-/**
- * Classes.
- * *** CHECK OUR IMPORT, THAT'S HOW WE'RE ACCESSING THIS!
- */
-
-class Movie {
-    constructor( name, genre, year ) { // We can use the constructor method to set up our properties. When we make a new Movie (object), we can pass in arguments this way!
-        this.name = name;
-        this.genre = genre;
-        this.year = year;
-    }
-    get getName() { // How we retrieve the property. A GETTER.
-        return this.name;
-    }
-    set setName( name ) { // How we store a new property value. A SETTER.
-        if ( typeof name === 'string' ) {
-            this.name = name;
-        } else {
-            this.name = name.toString();
-        }
-    }
-    get getYear() {
-        return 'y'+this.year;
-    }
-    set setYear( year ) {
-        this.year = Number( year );
-    }
-    showPoster() { // This is a method! We can name them as we'd like.
-        const info = `
-            MOVIE INFO
-            ==========
-            Name:  ${this.name}
-            Genre: ${this.genre}
-            Year:  ${this.year}
-        `;
-        return info;
-    }
-}
 
 const tron = new Movie( 'Disney\'s TRON', 'Adventure', 1982 );
 const dragonheart = new Movie( 'Dragonheart', 'Medieval Fantasy', 1996 );
