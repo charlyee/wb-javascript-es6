@@ -287,3 +287,46 @@ console.log( mySetIterator.next().value ); // Now value 3...
 
 mySet.delete( 'Hello, World! :)' ); // Remove an element from your Set.
 console.log( mySet );
+
+/**
+ * Maps
+ * KEY VALUE PAIR data-type
+ */
+
+const myValues = { // Old workaround was objects... but these are properties.
+    name: 'Billy',
+    age: 95,
+    greeting: 'Yo!'
+}
+
+console.log( myValues ); // Object... gross, not what this is intended for.
+
+const myMap = new Map( [ // We can pass an array of arrays...
+    ['name', 'Billy'], // [KEY, VALUE]
+    ['age', 95],
+    ['greeting', 'Yo!'],
+    [7, 'We can even use numbers as keys, unlike objects.']
+] );
+
+console.log( myMap.size ); // How many items in the Map?
+console.log( myMap.has( 'age' ) ); // Check for a key... // true
+console.log( myMap.get( 'age' ) ); // Grab our value from the key! // 95
+const myMapKeyIterator = myMap.keys(); // Gets an iterator.
+console.log( myMapKeyIterator.next().value ); // First item's key...
+console.log( myMapKeyIterator.next().value ); // Second item's key...
+console.log( myMapKeyIterator.next().value ); // Third item's key...
+console.log( myMapKeyIterator.next().value ); // Fourth item's key...
+
+myMap.set( 'country', 'Canada' ); // Add a new key-value pair.
+
+const myMapValueIterator = myMap.values(); // Gets an iterator.
+console.log( myMapValueIterator.next().value ); // First item's value...
+console.log( myMapValueIterator.next().value ); // Second item's value...
+console.log( myMapValueIterator.next().value ); // Third item's value...
+console.log( myMapValueIterator.next().value ); // Fourth item's value...
+console.log( myMapValueIterator.next().value ); // Fifth item's value...
+
+console.log( myMap );
+
+myMap.clear(); // Empty out our Map.
+console.log( myMap.size ); // Zero now :(
