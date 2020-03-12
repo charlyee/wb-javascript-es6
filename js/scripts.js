@@ -2,6 +2,10 @@ import { Movie } from './Movie.Class.js'; // Bring in our file.
 // You'll have to use a server for this to work! Browsers protect your filesystem
 // from JavaScript by default, so this is a quick workaround we can use.
 
+import { BuyableMovie } from './BuyableMovie.Class.js';
+
+import { Calculator } from './Calculator.Class.js';
+
 /**
  * Let's see what some of our newer array methods are...
  */
@@ -241,8 +245,3 @@ const godfather = new Movie( 'Godfather II', 'Action/Thriller', 1974 );
 console.log( tron );
 console.log( dragonheart );
 console.log( godfather );
-
-
-/**
- * Inheritance.
- */
