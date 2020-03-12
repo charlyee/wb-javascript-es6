@@ -1,5 +1,6 @@
 import { Movie } from './Movie.Class.js'; // Bring in our file.
-// We'll come back to import! ^^^
+// You'll have to use a server for this to work! Browsers protect your filesystem
+// from JavaScript by default, so this is a quick workaround we can use.
 
 /**
  * Let's see what some of our newer array methods are...
